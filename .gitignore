@@ -1,5 +1,6 @@
 node_modules/*
 .vs/*
+.vscode/*
 ArquiteturaLimpa.API/bin/*
 ArquiteturaLimpa.API/obj/*
 ArquiteturaLimpa.Aplicacao/bin/*
