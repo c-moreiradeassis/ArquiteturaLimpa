@@ -1,0 +1,12 @@
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.InversaoControle.deps.json
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.InversaoControle.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ref\ArquiteturaLimpa.InversaoControle.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.InversaoControle.pdb
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.csprojAssemblyReference.cache
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.AssemblyInfoInputs.cache
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.AssemblyInfo.cs
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.csproj.CoreCompileInputs.cache
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ref\ArquiteturaLimpa.InversaoControle.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.pdb
