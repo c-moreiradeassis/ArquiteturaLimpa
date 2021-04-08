@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquiteturaLimpa.Infra.Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquiteturaLimpa.InversaoControle", "ArquiteturaLimpa.InversaoControle\ArquiteturaLimpa.InversaoControle.csproj", "{FB7F988F-6C1B-475C-9CBE-2550FE1851FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquiteturaLimpa.Servico", "ArquiteturaLimpa.Servico\ArquiteturaLimpa.Servico.csproj", "{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{FB7F988F-6C1B-475C-9CBE-2550FE1851FA}.Release|x64.Build.0 = Release|Any CPU
 		{FB7F988F-6C1B-475C-9CBE-2550FE1851FA}.Release|x86.ActiveCfg = Release|Any CPU
 		{FB7F988F-6C1B-475C-9CBE-2550FE1851FA}.Release|x86.Build.0 = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|x64.Build.0 = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Debug|x86.Build.0 = Debug|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|x64.ActiveCfg = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|x64.Build.0 = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|x86.ActiveCfg = Release|Any CPU
+		{4F7BFA64-4EDC-45E9-8CA9-AB05F172BB07}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

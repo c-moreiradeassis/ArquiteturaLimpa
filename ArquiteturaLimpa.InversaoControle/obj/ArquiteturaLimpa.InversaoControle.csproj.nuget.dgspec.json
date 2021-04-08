@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj": {}
+    "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj": {
+    "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj",
+        "projectUniqueName": "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj",
         "projectName": "ArquiteturaLimpa.InversaoControle",
-        "projectPath": "c:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj",
+        "projectPath": "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj",
         "packagesPath": "C:\\Users\\ALEXANDRE\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\obj\\",
+        "outputPath": "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALEXANDRE\\AppData\\Roaming\\NuGet\\NuGet.Config",
