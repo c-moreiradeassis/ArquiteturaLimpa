@@ -3,9 +3,9 @@ using ArquiteturaLimpa.Dominio.Entidades;
 
 namespace ArquiteturaLimpa.Dominio.Interfaces
 {
-    public interface IContatoRepositorio
+    public interface IContatosRepositorio
     {
         Task<Contatos[]> ListarContatos();
-        Task<Contatos> ListarContato();
+        Task<Contatos> ListarContato(string nome);
     }
 }
