@@ -18,18 +18,18 @@ namespace ArquiteturaLimpa.Aplicacao.Serviços
             _mapper = mapper;
         }
 
-        public async Task<IQueryable<ContatosViewModel>> ListarContato(string nome)
+        public async Task<ContatosViewModel> ListarContato(string nome)
         {
             var resultado = await _contatoRepositorio.ListarContato(nome);
 
-            return _mapper.Map<IQueryable<ContatosViewModel>>(resultado);
+            return _mapper.Map<ContatosViewModel>(resultado);
         }
 
-        public async Task<IQueryable<ContatosViewModel>> ListarContatos()
+        public async Task<ContatosViewModel[]> ListarContatos()
         {
             var resultado = await _contatoRepositorio.ListarContatos();
 
-            return _mapper.Map<IQueryable<ContatosViewModel>>(resultado);
+            return _mapper.Map<ContatosViewModel[]>(resultado);
         }
     }
 }

@@ -6,8 +6,7 @@ namespace ArquiteturaLimpa.Aplicacao.Interfaces
 {
     public interface IContatosServico
     {
-        Task<IQueryable<ContatosViewModel>> ListarContatos();
-
-        Task<IQueryable<ContatosViewModel>> ListarContato(string nome);
+        Task<ContatosViewModel[]> ListarContatos();
+        Task<ContatosViewModel> ListarContato(string nome);
     }
 }

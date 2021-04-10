@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using ArquiteturaLimpa.InversaoControle;
+using ArquiteturaLimpa.Servico.ConfiguracaoAutoMapper;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 
 namespace ArquiteturaLimpa.Servico
 {
@@ -21,7 +22,13 @@ namespace ArquiteturaLimpa.Servico
                 configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                              .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
             })
-            .ConfigureServices((_, services) =>
-            services.AddHostedService<Processador>());
+            .ConfigureServices((hostedServices, services) =>
+            {
+                IConfiguration configuration = hostedServices.Configuration;
+
+                services.AddHostedService<Processador>()
+                        .AdicionarInfraRepositorio(configuration)
+                        .AdicionarConfiguracaoAutoMapper();
+            });
     }
 }

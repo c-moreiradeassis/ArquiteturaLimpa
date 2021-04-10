@@ -10,7 +10,7 @@ namespace ArquiteturaLimpa.Aplicacao.ViewModels
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O telefone é obrigatório")]
-        [MaxLength(9)]
+        [MaxLength(10)]
         public string Telefone { get; set; }
 
         [Required(ErrorMessage = "O e-mail é obrigatório")]

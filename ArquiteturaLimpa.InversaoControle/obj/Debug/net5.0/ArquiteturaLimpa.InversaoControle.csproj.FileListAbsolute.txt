@@ -10,3 +10,10 @@ C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.Inversao
 C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.dll
 C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ref\ArquiteturaLimpa.InversaoControle.dll
 C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.pdb
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Aplicacao.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Dominio.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Infra.Repositorio.dll
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Aplicacao.pdb
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Infra.Repositorio.pdb
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\bin\Debug\net5.0\ArquiteturaLimpa.Dominio.pdb
+C:\Users\ALEXANDRE\Documents\Projetos\ArquiteturaLimpa\ArquiteturaLimpa.InversaoControle\obj\Debug\net5.0\ArquiteturaLimpa.InversaoControle.csproj.CopyComplete

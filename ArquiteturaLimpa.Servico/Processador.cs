@@ -1,3 +1,4 @@
+using ArquiteturaLimpa.Aplicacao.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -11,12 +12,14 @@ namespace ArquiteturaLimpa.Servico
     {
         private readonly ILogger<Processador> _logger;
         private readonly IConfiguration _configuration;
+        private readonly IContatosServico _contatosServico;
         private Timer _timer;
 
-        public Processador(ILogger<Processador> logger, IConfiguration configuration)
+        public Processador(ILogger<Processador> logger, IConfiguration configuration, IContatosServico contatosServico)
         {
             _logger = logger;
             _configuration = configuration;
+            _contatosServico = contatosServico;
         }
 
         public void Dispose()
@@ -26,7 +29,17 @@ namespace ArquiteturaLimpa.Servico
 
         private void IniciarMotor(object state)
         {
-            _logger.LogInformation("Rotina executada");
+            var contatos = _contatosServico.ListarContatos().Result;
+
+            foreach (var item in contatos)
+            {
+                _logger.LogInformation($"\t Nome: {item.Nome} \n\t " +
+                                       $"CPF: {item.CPF} \n\t " +
+                                       $"Telefone: {item.Telefone} \n\t " +
+                                       $"Email: {item.Email}");
+            }
+
+            _logger.LogInformation("Processo concluído.");
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
