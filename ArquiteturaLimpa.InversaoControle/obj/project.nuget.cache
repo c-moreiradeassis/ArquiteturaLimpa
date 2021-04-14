@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8WhhPdlMS5TO5N8Aw29g+0SCLL7oNeDtzmyNBhqbNL+4BZIEaLawtLvZfXDVGBqAVfS61kuzaTxW9CCBjpR78g==",
+  "dgSpecHash": "Ab5sx/9kzDjfiYD0dqmS5Ka4s0viVNfxvBM99gB4bYz8pom7JdK99YDNSZV2j598/ymcHZ/TFBqI5KOwoc9qBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ALEXANDRE\\Documents\\Projetos\\ArquiteturaLimpa\\ArquiteturaLimpa.InversaoControle\\ArquiteturaLimpa.InversaoControle.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\ALEXANDRE\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

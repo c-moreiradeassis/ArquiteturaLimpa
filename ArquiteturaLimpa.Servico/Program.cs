@@ -1,5 +1,4 @@
 ﻿using ArquiteturaLimpa.InversaoControle;
-using ArquiteturaLimpa.Servico.ConfiguracaoAutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

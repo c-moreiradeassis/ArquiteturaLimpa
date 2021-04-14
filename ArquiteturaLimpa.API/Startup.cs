@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ArquiteturaLimpa.Infra.Repositorio.Contexto;
 using Microsoft.EntityFrameworkCore;
+using ArquiteturaLimpa.InversaoControle;
 
 namespace ArquiteturaLimpa.API
 {
@@ -29,6 +30,9 @@ namespace ArquiteturaLimpa.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ArquiteturaLimpaContexto>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AdicionarInfraRepositorio(Configuration)
+                    .AdicionarConfiguracaoAutoMapper();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
