@@ -9,22 +9,24 @@ namespace ArquiteturaLimpa.Infra.Repositorio.Repositorios
 {
     public class ContatoRepositorio : IContatosRepositorio
     {
-        private readonly ArquiteturaLimpaContexto _arquiteturaLimpaContexto;
+        private readonly ArquiteturaLimpaContexto _contexto;
 
-        public ContatoRepositorio(ArquiteturaLimpaContexto arquiteturaLimpaContexto)
+        public ContatoRepositorio(ArquiteturaLimpaContexto contexto)
         {
-            _arquiteturaLimpaContexto = arquiteturaLimpaContexto;
+            _contexto = contexto;
+
+            _contexto.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
         public async Task<Contatos> ListarContato(string nome)
         {
-            IQueryable<Contatos> contatos = _arquiteturaLimpaContexto.Contatos.Where(c => c.Nome.Trim().Contains(nome));
+            IQueryable<Contatos> contatos = _contexto.Contatos.Where(c => c.Nome.Trim().Contains(nome));
 
             return await contatos.FirstOrDefaultAsync();
         }
 
         public async Task<Contatos[]> ListarContatos()
         {
-            IQueryable<Contatos> contatos = _arquiteturaLimpaContexto.Contatos;
+            IQueryable<Contatos> contatos = _contexto.Contatos;
 
             return await contatos.ToArrayAsync();
         }
