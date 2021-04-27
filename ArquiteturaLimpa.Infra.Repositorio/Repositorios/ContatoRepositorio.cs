@@ -24,6 +24,13 @@ namespace ArquiteturaLimpa.Infra.Repositorio.Repositorios
             return await contatos.FirstOrDefaultAsync();
         }
 
+        public async Task<Contatos> ListarContato(int id)
+        {
+            IQueryable<Contatos> contatos = _contexto.Contatos.Where(c => c.Id == id);
+
+            return await contatos.FirstOrDefaultAsync();
+        }
+
         public async Task<Contatos[]> ListarContatos()
         {
             IQueryable<Contatos> contatos = _contexto.Contatos;

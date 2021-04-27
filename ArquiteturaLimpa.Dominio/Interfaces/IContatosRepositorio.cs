@@ -6,6 +6,7 @@ namespace ArquiteturaLimpa.Dominio.Interfaces
     public interface IContatosRepositorio
     {
         Task<Contatos[]> ListarContatos();
+        Task<Contatos> ListarContato(int id);
         Task<Contatos> ListarContato(string nome);
     }
 }

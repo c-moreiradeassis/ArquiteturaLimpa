@@ -8,5 +8,9 @@ namespace ArquiteturaLimpa.Aplicacao.Interfaces
     {
         Task<ContatosViewModel[]> ListarContatos();
         Task<ContatosViewModel> ListarContato(string nome);
+        void AdicionarContatos(ContatosViewModel contatos);
+        void AtualizarContatos(ContatosViewModel contatos);
+        void ExcluirContatos(int id);
+        Task<bool> SalvarMudancas();
     }
 }

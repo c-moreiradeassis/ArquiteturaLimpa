@@ -15,8 +15,9 @@ namespace ArquiteturaLimpa.InversaoControle
     {
         public static IServiceCollection AdicionarInfraRepositorio(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ArquiteturaLimpaContexto>(x => x.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ArquiteturaLimpaContexto>(x => x.UseSqlServer(configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Transient);
 
+            services.AddScoped<IArquiteturaLimpaRepositorio, ArquiteturaLimpaRepositorio>();
             services.AddScoped<IContatosRepositorio, ContatoRepositorio>();
             services.AddScoped<IContatosServico, ContatosServico>();
 

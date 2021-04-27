@@ -1,4 +1,5 @@
 ﻿using ArquiteturaLimpa.Aplicacao.Interfaces;
+using ArquiteturaLimpa.Aplicacao.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -42,8 +43,74 @@ namespace ArquiteturaLimpa.API.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro ao consultar o contato");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro ao consultar o contato.");
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(ContatosViewModel contato)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _contatosService.AdicionarContatos(contato);
+
+                    if (await _contatosService.SalvarMudancas())
+                    {
+                        return Created($"/api/contatos/{contato.Id}", contato);
+                    }
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro ao incluir o contato.");
+            }
+
+            return BadRequest();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put(ContatosViewModel contato)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _contatosService.AtualizarContatos(contato);
+
+                    if (await _contatosService.SalvarMudancas())
+                    {
+                        return Created($"/api/contatos/{contato.Id}", contato);
+                    }
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro ao atualizar o contato.");
+            }
+
+            return BadRequest();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                _contatosService.ExcluirContatos(id);
+
+                if (await _contatosService.SalvarMudancas())
+                {
+                    return Ok();
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Occoreu um erro ao excluir o contato.");
+            }
+
+            return BadRequest();
         }
     }
 }
