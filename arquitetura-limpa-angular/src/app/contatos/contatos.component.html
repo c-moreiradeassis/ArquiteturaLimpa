@@ -1,16 +1,46 @@
-<table>
+<table class="table table-striped">
   <thead>
-    <th>Nome</th>
-    <th>Telefone</th>
-    <th>Email</th>
-    <th>CPF</th>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Telefone</th>
+      <th>Email</th>
+    </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr *ngFor="let item of listaContatos">
+      <td>{{ item.nome }}</td>
+      <td>{{ item.cpf }}</td>
+      <td>{{ item.telefone }}</td>
+      <td>{{ item.email }}</td>
     </tr>
   </tbody>
 </table>
+
+  <form [formGroup]="formulario">
+      <div class="col-md-5">
+        <label for="txt-nome" class="form-label">Nome</label>
+        <input type="text" id="txt-nome" class="form-control" formControlName="nome" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="txt-cpf" class="form-label">CPF</label>
+        <input type="text" id="txt-cpf" class="form-control" formControlName="cpf" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="txt-telefone" class="form-label">Telefone</label>
+        <input type="tel" id="txt-nome" class="form-control" formControlName="telefone" />
+      </div>
+
+      <div class="col-md-5">
+        <label for="txt-email" class="form-label">Email</label>
+        <input type="email" id="txt-email" class="form-control" formControlName="email" />
+      </div>
+      
+      <br>
+      
+      <div class="col-md-5 text-right">
+        <button class="btn btn-success">Salvar</button>
+      </div>
+  </form>
