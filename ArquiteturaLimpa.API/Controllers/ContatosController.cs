@@ -70,8 +70,8 @@ namespace ArquiteturaLimpa.API.Controllers
             return BadRequest();
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Put(ContatosViewModel contato)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, ContatosViewModel contato)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace ArquiteturaLimpa.API.Controllers
             return BadRequest();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try

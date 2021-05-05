@@ -11,8 +11,10 @@ import { ContatosService } from '../_services/contatos.service';
 export class ContatosComponent implements OnInit {
   contato = {} as Contatos;
   listaContatos: Contatos[] = [];
+  operacao = 'post';
 
   formulario = this.formBuilder.group({
+    id: [''],
     nome: ['', Validators.required],
     cpf: ['', Validators.required],
     telefone: ['', Validators.required],
@@ -28,6 +30,10 @@ export class ContatosComponent implements OnInit {
     this.getContatos();
   }
 
+  apresentarModal(template: any){
+    template.show();
+  }
+
   deleteContatos(id: number) {
     this.contatosService.deleteContatos(id).subscribe(
       (resp) => {
@@ -39,6 +45,11 @@ export class ContatosComponent implements OnInit {
     );
   }
 
+  editarForm(contatoEditar: Contatos) {
+    this.formulario.patchValue(contatoEditar);
+    this.operacao = 'put';
+  }
+
   getContatos() {
     this.contatosService.getContatos().subscribe(
       (resp: Contatos[]) => {
@@ -48,6 +59,16 @@ export class ContatosComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  incluirAtualizarContato() {
+    if (this.operacao == 'post') {
+      this.postContatos();
+    } else {
+      this.putContatos();
+
+      this.operacao = 'post';
+    }
   }
 
   postContatos() {
@@ -64,10 +85,7 @@ export class ContatosComponent implements OnInit {
   }
 
   putContatos() {
-    this.contato = Object.assign(
-      { id: this.contato.id },
-      this.formulario.value
-    );
+    this.contato = Object.assign({ id: this.contato.id }, this.formulario.value);
 
     this.contatosService.putContatos(this.contato).subscribe(
       (resp) => {
