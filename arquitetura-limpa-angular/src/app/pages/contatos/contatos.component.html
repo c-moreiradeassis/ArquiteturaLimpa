@@ -1,0 +1,126 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h4 class=" card-title">Contatos</h4>
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>CPF</th>
+                  <th>Telefone</th>
+                  <th>Email</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of listaContatos">
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.nome }}</td>
+                  <td>{{ item.cpf }}</td>
+                  <td>{{ item.telefone }}</td>
+                  <td>{{ item.email }}</td>
+                  <td>
+                    <button class="btn btn-warning" (click)="editarForm(item)">
+                      Editar
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="deleteContatos(item.id)">
+                      Excluir
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div
+  bsModal
+  #template="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dialog-sizes-name1"
+>
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="dialog-sizes-name1" class="modal-title pull-left">Contatos</h5>
+        <button
+          type="button"
+          class="close pull-right"
+          (click)="template.hide()"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario">
+          <div class="col-md-12">
+            <label for="txt-nome" class="form-label">Nome</label>
+            <input
+              type="text"
+              id="txt-nome"
+              class="form-control"
+              formControlName="nome"
+            />
+          </div>
+
+          <div class="col-md-2">
+            <label for="txt-cpf" class="form-label">CPF</label>
+            <input
+              type="text"
+              id="txt-cpf"
+              class="form-control"
+              formControlName="cpf"
+            />
+          </div>
+
+          <div class="col-md-2">
+            <label for="txt-telefone" class="form-label">Telefone</label>
+            <input
+              type="tel"
+              id="txt-nome"
+              class="form-control"
+              formControlName="telefone"
+            />
+          </div>
+
+          <div class="col-md-5">
+            <label for="txt-email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="txt-email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+
+          <br />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" (click)="incluirAtualizarContato()">
+          Salvar
+        </button>
+        <button class="btn btn-secondary" (click)="template.hide()">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
