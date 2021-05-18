@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Contatos } from '../_models/contatos';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Contatos } from "../_models/contatos";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ContatosService {
-  baseURL = 'http://localhost:5000/Contatos';
+  baseURL = "http://localhost:5000/Contatos";
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class ContatosService {
   }
 
   postContatos(contato: Contatos) {
-    return this.http.post(`${this.baseURL}`, contato);
+    return this.http.post(this.baseURL, contato);
   }
 
   putContatos(contato: Contatos) {

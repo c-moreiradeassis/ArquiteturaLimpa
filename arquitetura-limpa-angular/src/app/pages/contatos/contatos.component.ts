@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Contatos } from '../../_models/contatos'
 import { ContatosService } from '../../_services/contatos.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contatos',
@@ -11,9 +13,9 @@ export class ContatosComponent implements OnInit {
   contato = {} as Contatos;
   listaContatos: Contatos[] = [];
   operacao = 'post';
+  modalRef: BsModalRef;
 
   formulario = this.formBuilder.group({
-    id: [''],
     nome: ['', Validators.required],
     cpf: ['', Validators.required],
     telefone: ['', Validators.required],
@@ -22,15 +24,17 @@ export class ContatosComponent implements OnInit {
 
   constructor(
     private contatosService: ContatosService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private modalService: BsModalService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
     this.getContatos();
   }
 
-  apresentarModal(template: any){
-    template.show();
+  abrirModal(template: TemplateRef<any>){
+    this.modalRef = this.modalService.show(template);
   }
 
   deleteContatos(id: number) {
@@ -44,9 +48,11 @@ export class ContatosComponent implements OnInit {
     );
   }
 
-  editarForm(contatoEditar: Contatos) {
+  editarForm(contatoEditar: Contatos, template: TemplateRef<any>) {
+    this.contato = contatoEditar;
     this.formulario.patchValue(contatoEditar);
     this.operacao = 'put';
+    this.abrirModal(template);
   }
 
   getContatos() {
@@ -65,20 +71,20 @@ export class ContatosComponent implements OnInit {
       this.postContatos();
     } else {
       this.putContatos();
-
       this.operacao = 'post';
     }
   }
 
   postContatos() {
     this.contato = Object.assign({}, this.formulario.value);
-
+    console.log(this.contato);
     this.contatosService.postContatos(this.contato).subscribe(
-      (resp) => {
-        console.log(resp);
+      () => {
+        this.toastr.success('Contato cadastrado com sucesso.');
+        this.modalRef.hide();
       },
       (error) => {
-        console.log(error);
+        this.toastr.error(error);
       }
     );
   }
@@ -87,11 +93,12 @@ export class ContatosComponent implements OnInit {
     this.contato = Object.assign({ id: this.contato.id }, this.formulario.value);
 
     this.contatosService.putContatos(this.contato).subscribe(
-      (resp) => {
-        console.log(resp);
+      () => {
+        this.toastr.success('Contato atualizado com sucesso.');
+        this.modalRef.hide();
       },
       (error) => {
-        console.log(error);
+        this.toastr.error(error);
       }
     );
   }
